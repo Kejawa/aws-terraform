@@ -21,3 +21,12 @@ resource "aws_s3_bucket" "first_bucket" {
     Environment = "Dev"
   }
 }
+
+resource "aws_s3_bucket" "first_bucket2" {
+  bucket = "tech-bucket-12272"
+
+  tags = {
+    Name        = "My bucket 3.0"
+    Environment = "test"
+  }
+}
