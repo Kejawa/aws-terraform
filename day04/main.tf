@@ -1,11 +1,14 @@
 terraform {
-    backend "s3" {
-    bucket = "kjtech-terraform-state"
-    key    = "dev/terraform.tfstate"
-    region = "us-east-1"
-    encrypt = true
-    use_lockfile = true
+  
+  cloud {
+    
+    organization = "kjtutorials"
+
+    workspaces {
+      name = "tf-cli"
+    }
   }
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
