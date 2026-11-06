@@ -14,7 +14,7 @@ provider "aws" {
 
 # Create s3 bucket
 resource "aws_s3_bucket" "first_bucket" {
-  bucket = "tech-bucket-12345"
+  bucket = "tech-bucket-12275"
 
   tags = {
     Name        = "My bucket 2.0"
